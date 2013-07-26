@@ -1,6 +1,6 @@
 <h1>Silex-SocialFactory</h1>
 
-Social authentication classes to use with Silex. You could use it with any framework of code, but you will have to change the session provider.
+Social authentication classes to use with Silex. You could use it with any framework or code, but you will have to change the <b>session provider</b>.
 
 Even it's ment to act as a <i>factory</i>, I've added methods as <i>createTwitter</i> so I can hardcode the return type and this way use the autocomplete functionallity of IDEs.
 
