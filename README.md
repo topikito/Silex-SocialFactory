@@ -43,10 +43,10 @@ Login function returns the social ID of the user. Auth functions returns ReturnO
 Returns the social ID of the user.
 
 ```php
-	$facebookObject = Factory::createFacebook($this->_app);
+	$facebookObject = Factory::createFacebook($app);
 	$facebookObject
-		->setAppId($config['social.login.facebook.appid'])
-		->setSecret($config['social.login.facebook.secret']);
+		->setAppId($config['facebook.appid'])
+		->setSecret($config['facebook.secret']);
 
 	$result = $facebookObject->login();
 ```
@@ -55,10 +55,10 @@ Returns the social ID of the user.
 Returns the data of the user.
 
 ```php
-	$facebookObject = Factory::createFacebook($this->_app);
+	$facebookObject = Factory::createFacebook($app);
 	$facebookObject
-		->setAppId($config['social.login.facebook.appid'])
-		->setSecret($config['social.login.facebook.secret']);
+		->setAppId($config['facebook.appid'])
+		->setSecret($config['facebook.secret']);
 
 	$result = $facebookObject->auth();
 ```
