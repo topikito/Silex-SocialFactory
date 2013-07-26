@@ -29,9 +29,9 @@ abstract class Object
 		$this->_app = $app;
 	}
 
-	protected function _buildSocialResponse($type, $socialId, $avatar, $metadata, $email = null)
+	protected function _buildSocialResponse($type, $socialId, $avatar, $metadata, $email = null, $token = null)
 	{
-		$response = new Response($type, $socialId, $avatar, $metadata, $email);
+		$response = new Response($type, $socialId, $avatar, $metadata, $email, $token);
 		return $response;
 	}
 

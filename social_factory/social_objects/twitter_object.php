@@ -2,12 +2,13 @@
 
 namespace SocialFactory\SocialObjects;
 use TwitterOAuth;
+use Exception;
 
 /**
  * Class Twitter
  * @package SocialFactory\SocialObjects
  */
-class Twitter extends \SocialFactory\Object
+class TwitterObject extends \SocialFactory\Object
 {
 	const SOCIAL_TOKEN_NAME = 'token';
 	const SOCIAL_TOKEN_SECRET_NAME = 'token_secret';

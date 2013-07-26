@@ -2,8 +2,8 @@
 
 namespace SocialFactory;
 
-use \SocialFactory\SocialObjects\Twitter;
-use \SocialFactory\SocialObjects\Facebook;
+use SocialFactory\SocialObjects\FacebookObject;
+use SocialFactory\SocialObjects\TwitterObject;
 
 /**
  * Class Factory
@@ -14,7 +14,7 @@ class Factory
 	/**
 	 * @param string $type
 	 * @param \Silex\Application $app
-	 * @return null|Facebook|Twitter
+	 * @return null|FacebookObject|TwitterObject
 	 */
 	public static function create($type, $app)
 	{
@@ -23,11 +23,11 @@ class Factory
 		switch ($type):
 
 			case 'twitter':
-				$socialType = new Twitter($app);
+				$socialType = new TwitterObject($app);
 				break;
 
 			case 'facebook':
-				$socialType = new Facebook($app);
+				$socialType = new FacebookObject($app);
 				break;
 
 		endswitch;
@@ -37,11 +37,11 @@ class Factory
 
 	static public function createTwitter($app)
 	{
-		return new Twitter($app);
+		return new TwitterObject($app);
 	}
 
 	static public function createFacebook($app)
 	{
-		return new Twitter($app);
+		return new FacebookObject($app);
 	}
 }
