@@ -9,7 +9,7 @@ use SocialFactory\SocialObjects\TwitterObject;
  * Class Factory
  * @package SocialFactory
  */
-class Factory
+class SocialFactory
 {
 	/**
 	 * @param string $type

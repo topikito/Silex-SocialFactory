@@ -8,7 +8,7 @@ use Exception;
  * Class Twitter
  * @package SocialFactory\SocialObjects
  */
-class TwitterObject extends \SocialFactory\Object
+class TwitterObject extends \SocialFactory\SocialObject
 {
 	const SOCIAL_TOKEN_NAME = 'token';
 	const SOCIAL_TOKEN_SECRET_NAME = 'token_secret';
@@ -103,7 +103,7 @@ class TwitterObject extends \SocialFactory\Object
 	 * Once we've managed to authenticate the user, we retrieve the data and return it in a standard way using
 	 * our own Response object.
 	 *
-	 * @return \SocialFactory\Response
+	 * @return \SocialFactory\SocialResponse
 	 * @throws Exception
 	 */
 	public function auth()

@@ -8,7 +8,7 @@ use Exception;
  * Class FacebookObject : Called this way so it doesn't interfere with Facebooks class (Not using namespace)
  * @package SocialFactory\SocialObjects
  */
-class FacebookObject extends \SocialFactory\Object
+class FacebookObject extends \SocialFactory\SocialObject
 {
 	const SOCIAL_USERID_VARIABLE = '{{userId}}';
 	const SOCIAL_FACEBOOK_AVATAR_LARGE_URL = 'https://graph.facebook.com/{{userId}}/picture?type=large';

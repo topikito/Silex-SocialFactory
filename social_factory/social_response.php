@@ -6,7 +6,7 @@ namespace SocialFactory;
  * Class Response
  * @package SocialFactory
  */
-class Response
+class SocialResponse
 {
 
 	public $type;

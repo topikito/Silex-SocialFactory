@@ -6,7 +6,7 @@ namespace SocialFactory;
  * Class Object
  * @package SocialFactory
  */
-abstract class Object
+abstract class SocialObject
 {
 	/**
 	 * @var \Silex\Application
@@ -31,7 +31,7 @@ abstract class Object
 
 	protected function _buildSocialResponse($type, $socialId, $avatar, $metadata, $email = null, $token = null)
 	{
-		$response = new Response($type, $socialId, $avatar, $metadata, $email, $token);
+		$response = new SocialResponse($type, $socialId, $avatar, $metadata, $email, $token);
 		return $response;
 	}
 
