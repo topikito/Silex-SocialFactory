@@ -18,24 +18,24 @@ Login function returns the social ID of the user. Auth functions returns ReturnO
 <h4>Login</h4>
 
 ```php
-	$twitterObject = Factory::createTwitter($app);
-	$twitterObject->setConsumerKey($twitterData['key']);
-	$twitterObject->setConsumerSecret($twitterData['secret']);
-	$twitterObject->setCallbackURL($config['application.host'] . 'login/twitter/auth/');
+$twitterObject = SocialFactory::createTwitter($app);
+$twitterObject->setConsumerKey($twitterData['key']);
+$twitterObject->setConsumerSecret($twitterData['secret']);
+$twitterObject->setCallbackURL($config['application.host'] . 'login/twitter/auth/');
 
-	$redirectUrl = $twitterObject->login();
+$redirectUrl = $twitterObject->login();
 ```
 
 <h4>Auth</h4>
 
 ```php
-	$twitterObject = Factory::createTwitter($app);
-	$twitterObject->setConsumerKey($twitterData['key']);
-	$twitterObject->setConsumerSecret($twitterData['secret']);
-	$twitterObject->setOAuthToken($oAuthToken);
-	$twitterObject->setOAuthVerifier($oAuthVerifier);
+$twitterObject = SocialFactory::createTwitter($app);
+$twitterObject->setConsumerKey($twitterData['key']);
+$twitterObject->setConsumerSecret($twitterData['secret']);
+$twitterObject->setOAuthToken($oAuthToken);
+$twitterObject->setOAuthVerifier($oAuthVerifier);
 
-	$result = $twitterObject->auth();
+$result = $twitterObject->auth();
 ```
 
 <h3>Facebook</h3>
@@ -43,22 +43,22 @@ Login function returns the social ID of the user. Auth functions returns ReturnO
 Returns the social ID of the user.
 
 ```php
-	$facebookObject = Factory::createFacebook($app);
-	$facebookObject
-		->setAppId($config['facebook.appid'])
-		->setSecret($config['facebook.secret']);
+$facebookObject = SocialFactory::createFacebook($app);
+$facebookObject
+	->setAppId($config['facebook.appid'])
+	->setSecret($config['facebook.secret']);
 
-	$result = $facebookObject->login();
+$result = $facebookObject->login();
 ```
 
 <h4>Auth</h4>
 Returns the data of the user.
 
 ```php
-	$facebookObject = Factory::createFacebook($app);
-	$facebookObject
-		->setAppId($config['facebook.appid'])
-		->setSecret($config['facebook.secret']);
+$facebookObject = SocialFactory::createFacebook($app);
+$facebookObject
+	->setAppId($config['facebook.appid'])
+	->setSecret($config['facebook.secret']);
 
-	$result = $facebookObject->auth();
+$result = $facebookObject->auth();
 ```
