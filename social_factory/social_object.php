@@ -2,6 +2,8 @@
 
 namespace SocialFactory;
 
+use Exception;
+
 /**
  * Class Object
  * @package SocialFactory
